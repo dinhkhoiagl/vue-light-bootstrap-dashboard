@@ -13,6 +13,12 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  */
+import axios from "axios";
+window.axios = axios;
+
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
+window.axios.defaults.withCredentials = true;
+
 import Vue from "vue";
 import VueRouter from "vue-router";
 import App from "./App.vue";
@@ -27,6 +33,17 @@ import "./registerServiceWorker";
 // plugin setup
 Vue.use(VueRouter);
 Vue.use(LightBootstrap);
+
+import CKEditor from "@ckeditor/ckeditor5-vue2";
+Vue.use(CKEditor);
+
+
+import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
 
 // configure router
 const router = new VueRouter({

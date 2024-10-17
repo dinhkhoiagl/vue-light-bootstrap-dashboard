@@ -5,12 +5,18 @@ import NotFound from '../pages/NotFoundPage.vue'
 // Admin pages
 import Overview from 'src/pages/Overview.vue'
 import UserProfile from 'src/pages/UserProfile.vue'
-import TableList from 'src/pages/TableList.vue'
-import Typography from 'src/pages/Typography.vue'
-import Icons from 'src/pages/Icons.vue'
-import Maps from 'src/pages/Maps.vue'
-import Notifications from 'src/pages/Notifications.vue'
-import Upgrade from 'src/pages/Upgrade.vue'
+import UserList from 'src/pages/UserList.vue'
+import CategoryList from 'src/pages/CategoryList.vue'
+import ArticleList from 'src/pages/ArticleList.vue'
+
+import UserAdd from '../pages/User/UserAdd.vue'
+import UserEdit from '../pages/User/UserEdit.vue'
+
+import CategoryAdd from '../pages/Category/CategoryAdd.vue'
+import CategoryEdit from '../pages/Category/CategoryEdit.vue'
+
+import ArticleEdit from '../pages/Article/ArticleEdit.vue'
+import ArticleAdd from '../pages/Article/ArticleAdd.vue'
 
 const routes = [
   {
@@ -34,34 +40,49 @@ const routes = [
         component: UserProfile
       },
       {
-        path: 'table-list',
-        name: 'Table List',
-        component: TableList
+        path: 'users',
+        name: 'UserList',
+        component: UserList
       },
       {
-        path: 'typography',
-        name: 'Typography',
-        component: Typography
+        path: 'users/edit/:id',
+        name: 'UsersEdit',
+        component: UserEdit
       },
       {
-        path: 'icons',
-        name: 'Icons',
-        component: Icons
+        path: 'users/add',
+        name: 'UsersAdd',
+        component: UserAdd
       },
       {
-        path: 'maps',
-        name: 'Maps',
-        component: Maps
+        path: 'articles',
+        name: 'ArticleList',
+        component: ArticleList
       },
       {
-        path: 'notifications',
-        name: 'Notifications',
-        component: Notifications
+        path: 'articles/edit/:id',
+        name: 'ArticleEdit',
+        component: ArticleEdit
       },
       {
-        path: 'upgrade',
-        name: 'Upgrade to PRO',
-        component: Upgrade
+        path: 'articles/add',
+        name: 'ArticleAdd',
+        component: ArticleAdd
+      },
+      {
+        path: 'categories',
+        name: 'CategoryList',
+        component: CategoryList
+      },
+      {
+        path: 'categories/edit/:id',
+        name: 'CategoryEdit',
+        component: CategoryEdit
+      },
+      {
+        path: 'categories/add',
+        name: 'CategoryAdd',
+        component: CategoryAdd
       }
     ]
   },
