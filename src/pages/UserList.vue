@@ -42,7 +42,7 @@ export default {
   },
   created() {
     axios
-      .get('http://127.0.0.1:8000/api/usertest')
+      .get('http://127.0.0.1:8000/api/users')
       .then((response) => {
         const users = response.data.map(user => {
           return {
